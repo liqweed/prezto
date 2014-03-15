@@ -12,3 +12,4 @@ fi
 
 # Customize to your needs...
 
+alias sourcetree='open -a SourceTree'
