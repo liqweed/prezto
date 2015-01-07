@@ -1,3 +1,5 @@
+alias dwn=~/Downloads
+
 alias gw=./gradlew
 alias gwi=./gradlew idea
 
