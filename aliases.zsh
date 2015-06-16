@@ -1,10 +1,12 @@
-alias dwn=~/Downloads
+alias -g dwn=~/Downloads
+alias -g localdb=postgres://itfm_cloud_admin@localhost:5432/postgres
 
 alias gw=./gradlew
-alias gwi=./gradlew idea
+alias gdi=gw dependencyInsight --configuration compile --dependency $1
 
 alias br=brunch
 
+alias brewup="brew update && brew upgrade --all && brew cleanup && brew cask cleanup"
 alias bcask="brew cask"
 alias bcasks="brew cask search"
 alias bcaski="brew cask install"
@@ -22,6 +24,8 @@ alias dki="docker run -t -i -P"
 docker_rm_non_running() { docker rm $(docker ps -q -a); }
 docker_rmove_images() { docker rmi $(docker images -q); }
 db() { docker build -t="$1" .; }
+
+alias duclean=du -cs * | sort -n
 
 jvm() {
   export JAVA_HOME=`/usr/libexec/java_home -v "$1"`
